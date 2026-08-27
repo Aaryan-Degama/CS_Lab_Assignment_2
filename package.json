@@ -1,0 +1,16 @@
+{
+  "name": "problem19-cleartext-transmission",
+  "version": "1.0.0",
+  "description": "Cyber Security Assignment-2, Problem 19: Cleartext Transmission of Sensitive Data (deliberately vulnerable demo + fixed version)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:secure": "node secure-server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "selfsigned": "^2.4.1"
+  }
+}

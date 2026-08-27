@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SecureBank Demo - Login</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>SecureBank</h1>
+    <p class="subtitle">Sign in to your account</p>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <form action="/login" method="POST">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="alice" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="password123" required>
+
+      <button type="submit">Log in</button>
+    </form>
+
+    <p class="hint">Demo credentials: <strong>alice</strong> / <strong>password123</strong></p>
+  </div>
+</body>
+</html>
