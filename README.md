@@ -44,7 +44,7 @@ Files:
 Requires Node.js 18+ and npm.
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Aaryan-Degama/CS_Lab_Assignment_2.git
 cd problem19-cleartext-transmission
 npm install
 ```
