@@ -46,7 +46,7 @@ app.use(
       httpOnly: true,
       sameSite: "lax",
     },
-  })
+  }),
 );
 
 app.get("/", (req, res) => {
@@ -77,8 +77,13 @@ initUsers();
 
 // --- Fix, part 2: serve over TLS instead of plain HTTP ---
 const attrs = [{ name: "commonName", value: "localhost" }];
-const pems = selfsigned.generate(attrs, { days: 365 });
+// generate a 2048-bit RSA key to satisfy modern OpenSSL security levels
+const pems = selfsigned.generate(attrs, { days: 365, keySize: 2048 });
 
-https.createServer({ key: pems.private, cert: pems.cert }, app).listen(5443, "0.0.0.0", () => {
-  console.log("Fixed app running at https://localhost:5443 (TLS, self-signed cert)");
-});
+https
+  .createServer({ key: pems.private, cert: pems.cert }, app)
+  .listen(5443, "0.0.0.0", () => {
+    console.log(
+      "Fixed app running at https://localhost:5443 (TLS, self-signed cert)",
+    );
+  });
