@@ -8,7 +8,7 @@ demonstrated on video as required by the assignment.
 This is a Node/Express port of the equivalent Python/Flask version - same
 behaviour, same demo flow.
 
-> This video's link: **https://drive.google.com/file/d/1ZeLBOkVeWTJk9zHn4R5LtnPs35dMZ63H/view?usp=sharing**
+> This video's link: **https://drive.google.com/file/d/1ZeLBOkVeWTJk9zHn4R5LtnPs35dMZ63H/view?usp=sharing**<br>
 > Group ID: **20**
 
 ## The vulnerability
