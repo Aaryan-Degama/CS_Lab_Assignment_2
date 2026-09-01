@@ -1,12 +1,10 @@
 # Problem 19 — Cleartext Transmission of Sensitive Data (Node.js / Express)
 
 A small Express "SecureBank" login demo built for Assignment-2 (Cyber
-Security, July–Dec 2026, Section-B). It deliberately contains the assigned
+Security, July–Dec 2026, Section-C). It deliberately contains the assigned
 vulnerability so the flaw, its exploitation, and its fix can all be
 demonstrated on video as required by the assignment.
 
-This is a Node/Express port of the equivalent Python/Flask version - same
-behaviour, same demo flow.
 
 > This video's link: **https://drive.google.com/file/d/1ZeLBOkVeWTJk9zHn4R5LtnPs35dMZ63H/view?usp=sharing**<br>
 > Group ID: **20**
@@ -89,9 +87,6 @@ sudo tcpdump -i lo -A -s 0 'tcp port 5000' | grep -A5 "username="
 Then submit the login form in the browser and watch the terminal print the
 raw `username=...&password=...` body.
 
-For the video: run the app normally first and walk through the code/UI
-without revealing the flaw, *then* start the capture, submit the login
-form, and show the plaintext credentials appearing in Wireshark/tcpdump.
 
 ## Running the fixed version
 
